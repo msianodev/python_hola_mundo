@@ -43,8 +43,10 @@ compras = {
 def aplicar_promocion(compras):
     """
     Selecciona los clientes que califican para una promoción y aplica un descuento del 10%.
+
     :param compras: Un diccionario con los IDs de los clientes y los montos de sus compras.
     :return: Una lista con los IDs de los clientes que califican para la promoción y un diccionario con los montos ajustados.
+
     """
     clientes_promocion = []
     compras_ajustadas = {}
@@ -59,3 +61,25 @@ resultado = aplicar_promocion(compras)
 # [['Cliente1', 'Cliente3', 'Cliente4', 'Cliente6', 'Cliente8', 'Cliente9'],
 # {'Cliente1': 180.0, 'Cliente3': 162.0, 'Cliente4': 135.0, 'Cliente6': 144.0, 'Cliente8': 171.0, 'Cliente9': 189.0}]
 print(resultado)
+
+
+# Otro ejemplo Hola Mundo!
+
+
+def aplicar_promocion(compras):
+    """
+    Selecciona los clientes que califican para una promoción y aplica un descuento del 10%.
+
+    :param compras: Un diccionario con los IDs de los clientes y los montos de sus compras.
+    :return: Una lista con los IDs de los clientes que califican para la promoción y un diccionario con los montos ajustados.
+
+    """
+    clientes_con_promocion = [cliente for cliente,
+                              monto in compras.items() if monto > 150]
+    cuentas_cliente_con_promocion = {
+        cliente: monto for cliente, monto in compras.items() if monto > 150}
+
+    for cliente, monto in cuentas_cliente_con_promocion.items():
+        cuentas_cliente_con_promocion[cliente] = round(monto * 0.9, 2)
+
+        return [clientes_con_promocion, cuentas_cliente_con_promocion]
