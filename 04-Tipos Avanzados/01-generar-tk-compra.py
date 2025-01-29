@@ -1,7 +1,7 @@
 # Ejercicio 1:
 # Generar un Ticket de Compra
 #
-# Descripción:El objetivo de este ejercicio es crear un programa
+# Descripción: El objetivo de este ejercicio es crear un programa
 # que genere e imprima un ticket de compra a partir de una lista de productos.
 # Cada producto está representado por un diccionario con un nombre y un precio.
 # El programa debe calcular la cantidad de cada producto, el subtotal de cada uno y el total de la compra.
@@ -51,6 +51,11 @@ productos = [
 
 
 def generar_ticket(productos):
+    """
+    Genera e imprime un ticket de compra a partir de una lista de productos.
+    :param productos: Una lista de diccionarios con los nombres y precios de los productos.
+    :return: None
+    """
     total = 0
     print("-----------------")
     print("Ticket de compra:")
